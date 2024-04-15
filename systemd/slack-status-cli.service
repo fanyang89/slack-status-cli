@@ -1,0 +1,6 @@
+[Unit]
+Description=Update slack status
+
+[Service]
+ExecStart=/usr/local/bin/slack-status-cli set --emoji ":hello:" --status "<your status>"
+WorkingDirectory=/etc/slack-status-cli

@@ -1,0 +1,10 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - go build -o slack-status -trimpath main.go
+
+  publish:
+    cmds:
+      - GOARCH=amd64 GOOS=linux CGO_ENABLED=0 go build -o slack-status -trimpath main.go
